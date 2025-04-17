@@ -1,4 +1,9 @@
 # garden
+##### 0/ git clone github.com/ihebbennaceur/garden
+##### 0.1/ open vs code inside that folder
+##### 1 /  python -m venv venv
+##### 2/ cmd ; venv\Scripts\activate
+##### 3/ pip install -r requirements.txt
 
 # projet jardin 
 
