@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from app.db.database import Base
+from datetime import datetime
 
 class Recommendation(Base):
     __tablename__ = "recommendations"

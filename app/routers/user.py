@@ -2,16 +2,16 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.db.database import get_db
 from app.models.user import User
-from app.schemas.user import User, UserUpdate
+from app.schemas.user import User as UserSchema, UserUpdate
 from app.core.security import get_current_user
 
 router = APIRouter()
 
-@router.get("/me", response_model=User)
+@router.get("/me", response_model=UserSchema)
 def read_current_user(current_user: User = Depends(get_current_user)):
     return current_user
 
-@router.put("/me", response_model=User)
+@router.put("/me", response_model=UserSchema)
 def update_current_user(
     user_update: UserUpdate,
     db: Session = Depends(get_db),
